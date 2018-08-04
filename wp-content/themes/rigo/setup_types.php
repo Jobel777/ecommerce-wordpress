@@ -17,4 +17,3 @@ $typeManager->newType([
         'taxonomies' => ['post_tag']
         ]
     ])->register();
-

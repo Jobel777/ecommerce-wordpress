@@ -28,7 +28,7 @@ $api->get([
 
 /** ADDING PRODUCTS AND USERS ENTITIES BELOW **/
 
-/**
+/** 
 $api->get([ 
     'path' => '/products', 
     'controller' => 'ProductController:getProduct' 
