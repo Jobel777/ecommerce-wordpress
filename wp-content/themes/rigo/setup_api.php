@@ -23,19 +23,20 @@ $api = new \WPAS\Controller\WPASAPIController([
 
 $api->get([ 
     'path' => '/trainings', 
-    'controller' => 'TrainingController:getTraining' 
+    'controller' => 'TrainingController:getTraining', 
+    'capability' => 'activate_plugins'  
     ]); 
 
 /** ADDING PRODUCTS AND USERS ENTITIES BELOW **/
 
-/** 
+
 $api->get([ 
     'path' => '/products', 
     'controller' => 'ProductController:getProduct' 
     ]); 
-    
+/** 
     $api->get([ 
     'path' => '/users', 
     'controller' => 'UsersController:getUser' 
     ]); 
-    **/
+**/
