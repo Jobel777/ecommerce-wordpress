@@ -16,4 +16,4 @@ $typeManager->newType([
         'supports' => ['title', 'editor', 'thumbnail'],
         'taxonomies' => ['post_tag']
         ]
-    ])->register();
+    ])->register();    

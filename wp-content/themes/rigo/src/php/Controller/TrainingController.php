@@ -10,6 +10,7 @@ class TrainingController{
             'name' => 'Rigoberto'
             ];
     }
+    
     public function getTraining(){
         $query = Training::all(['post_status' => 'publish' ]);
         

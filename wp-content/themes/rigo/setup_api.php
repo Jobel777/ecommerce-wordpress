@@ -27,13 +27,7 @@ $api->get([
     ]); 
 
 /** ADDING PRODUCTS AND USERS ENTITIES BELOW **/
-
-/** 
-$api->get([ 
-    'path' => '/products', 
-    'controller' => 'ProductController:getProduct' 
-    ]); 
-    
+/**    
     $api->get([ 
     'path' => '/users', 
     'controller' => 'UsersController:getUser' 
