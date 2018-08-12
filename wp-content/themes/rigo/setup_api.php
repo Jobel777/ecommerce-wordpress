@@ -23,24 +23,31 @@ $api = new \WPAS\Controller\WPASAPIController([
 
 $api->get([ 
     'path' => '/trainings', 
-    'controller' => 'TrainingController:getTraining', 
-    'capability' => 'activate_plugins'  
+    'controller' => 'TrainingController:getTraining'//,    'capability' => 'activate_plugins'  
     ]); 
-
-/** ADDING PRODUCTS AND USERS ENTITIES BELOW **/
-<<<<<<< HEAD
-/**    
-=======
-
 
 $api->get([ 
-    'path' => '/products', 
-    'controller' => 'ProductController:getProduct' 
+    'path' => '/house', 
+    'controller' => 'HouseController:getHouse'//,    'capability' => 'activate_plugins'  
     ]); 
+
+
+/** ADDING PRODUCTS AND USERS ENTITIES BELOW **/
+
+
+$api->get([ 'path' => '/products', 
+            'controller' => 'ProductController:getAllProducts']);
+    
+$api->get([ 'path' => '/products/(?P<id>[\d]+)', 
+            'controller' => 'ProductController:getProducts']);  
+            
 /** 
->>>>>>> bcdf36610d808c2803fe494ccdbf0c1af00f13b0
     $api->get([ 
     'path' => '/users', 
     'controller' => 'UsersController:getUser' 
-    ]); 
-**/
+    ]); **/
+    
+    $api->put([ 'path' => '/products', 
+            'controller' => 'UsersController:createUser']);
+            
+

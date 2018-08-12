@@ -16,4 +16,14 @@ $typeManager->newType([
         'supports' => ['title', 'editor', 'thumbnail'],
         'taxonomies' => ['post_tag']
         ]
+    ])->register(); 
+    
+$typeManager->newType([
+    'type' => 'House', 
+    'class' => 'House',
+    'options' => [
+        'supports' => ['title', 'editor', 'thumbnail'],
+        'taxonomies' => ['post_tag']
+        ]
     ])->register();    
+    
