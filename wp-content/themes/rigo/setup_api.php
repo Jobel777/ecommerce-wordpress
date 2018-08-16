@@ -12,42 +12,53 @@ $api = new \WPAS\Controller\WPASAPIController([
 ]);
 
 
-/**
- * Then you can start adding each endpoint one by one
-*/
-/**$api->get([ 
+/** SAMPLE COURSE BELOW 
+ ** Then you can start adding each endpoint one by one
+$api->get([ 
     'path' => '/courses', 
     'controller' => 'SampleController:getDraftCourses' 
     ]); 
 **/
 
-$api->get([ 
-    'path' => '/trainings', 
-    'controller' => 'TrainingController:getTraining'//,    'capability' => 'activate_plugins'  
+
+/** TRAINING BELOW **/
+
+$api->get([ 'path' => '/trainings', 
+            'controller' => 'TrainingController:getTraining' //,    'capability' => 'activate_plugins'  
     ]); 
+    
+/** END TRAINING **/
 
-$api->get([ 
-    'path' => '/house', 
-    'controller' => 'HouseController:getHouse'//,    'capability' => 'activate_plugins'  
+/** HOME LIKE HOUSE BELOW **/
+$api->get([ 'path' => '/house', 
+            'controller' => 'HouseController:getHouse' //,    'capability' => 'activate_plugins'  
     ]); 
+/** END HOME **/
 
 
-/** ADDING PRODUCTS AND USERS ENTITIES BELOW **/
-
+/** PRODUCTS BELOW **/
 
 $api->get([ 'path' => '/products', 
             'controller' => 'ProductController:getAllProducts']);
-    
-$api->get([ 'path' => '/products/(?P<id>[\d]+)', 
-            'controller' => 'ProductController:getProducts']);  
+
+////$api->get([ 'path' => '/products/(?P<id>[\d]+)','controller' => 'ProductController:getProducts']);   
+
+/** END PRODUCTS **/
+
+
+
+/** USERS ENTITIES BELOW **/
+
+//$api->put([ 'path' => '/products', 'controller' => 'UsersController:createUser']);**/    
+
+$api->put([ 'path' => '/cuser', 
+            'controller' => 'UsersController:putNewUser']); 
             
-/** 
-    $api->get([ 
-    'path' => '/users', 
-    'controller' => 'UsersController:getUser' 
-    ]); **/
-    
-    $api->put([ 'path' => '/products', 
-            'controller' => 'UsersController:createUser']);
-            
+$api->get([ 'path' => '/gusers', 
+            'controller' => 'UsersController:getAllUsers']);             
+
+/** END PRODUCTS **/
+
+
+
 
